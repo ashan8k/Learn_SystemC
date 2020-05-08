@@ -21,6 +21,7 @@ SC_MODULE(mon) {
         }
     }
     SC_CTOR(mon) {
+        cout << "Constructing mon " << endl;
         SC_THREAD(monitor);
         sensitive << Clk.pos();
     }

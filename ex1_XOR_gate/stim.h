@@ -27,6 +27,7 @@ SC_MODULE(stim){
     }
 
     SC_CTOR(stim){
+        cout << "Constructing stim "<< endl;
         SC_THREAD(StimGen);
         sensitive << Clk.pos();
     }
